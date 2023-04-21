@@ -1,0 +1,39 @@
+﻿@using HandBook.DataBaseFolder;
+@model HandBook.Views.Main.AddEmployeeModel
+@{
+    <form method="post">
+        <label>Выберите сотрудника</label><br/>
+        <select name="employee">
+        @foreach (var dep in (List<string>) ViewData["EmployeeList"])
+        {
+            <option value="@dep">@dep</option>
+        }
+        </select><br />
+        <label>Имя:</label><br />
+        <input type="text" name="firstname" /><br />
+        <label> Фамилия:</label><br />
+        <input type="text" name="secondname" />  <br />
+        <label>Отчество:</label><br />
+        <input type="text" name="patronymic" /><br />
+        <label> Телефон:</label><br />
+        <input type="text" name="phone" /><br />
+        <label> Отдел:</label><br />
+        <select name="department">
+            @foreach (var dep in (List<string>)ViewData["DepartmentList"])
+            {
+                <option value="@dep">@dep</option>
+            }
+        </select><br />
+        <label> Кабинет:</label><br />
+        <select name="cabinet">
+            @foreach (var dep in (List<string>)ViewData["CabinetList"])
+            {
+                <option value="@dep">@dep</option>
+            }
+        </select><br />
+        <br />
+        <label>@ViewData["Error Message"]</label><br />
+        <input type="submit" value="Подтвердить" />
+        <br />
+    </form>
+}

@@ -1,0 +1,18 @@
+﻿@using HandBook.DataBaseFolder;
+@model HandBook.Views.Main.AddEmployeeModel
+@{
+    <form method="post">
+        <label>Выберите критерий сортировки</label><br />
+        <select name="selectOption">
+            <option value="id_department">Отдел</option>
+            <option value="secondname">Фамилия</option>
+            <option value="firstname">Имя</option>
+            <option value="patronymic">Отчество</option>
+            <option value="Phone">Номер телефона</option>
+        </select><br />
+        <input type="text" name="selectValue"/>
+        <label>@ViewData["Error Message"]</label><br />
+        <input type="submit" value="Подтвердить"/>
+        <br />
+    </form>
+}

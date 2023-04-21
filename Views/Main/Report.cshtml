@@ -1,0 +1,50 @@
+﻿@using HandBook.DataBaseFolder;
+@model IEnumerable<HandBook.DataBaseFolder.Employee>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+@if (ViewData["CurrentUser"].ToString() == "")
+{
+    <label> Текущий пользователь : Незарегистрированный пользователь</label>
+}
+else
+{
+    <label> Текущий пользователь : @(ViewData["CurrentUser"].ToString())</label>
+}
+<br />
+<br />
+<table>
+    @foreach (var dep in (List<string>) ViewData["DepartmetList"])
+    {
+        <tr>
+            <th>@dep</th>
+            <th>Тел номер</th>
+            <th>№ кабинета</th>
+        </tr>
+        @foreach (var o in Model)
+        {
+            @if(o.Department.Name == dep)
+            {
+                <tr>
+                    <td>@o.Firstname @o.Secondname @o.Patronymic</td>
+                    <td>@o.Phone</td>
+                    <td>@o.Cabinets.Name</td>
+                </tr>
+            }
+        }
+    }
+</table>
+@if (ViewData["CurrentUser"].ToString() != "")
+{
+    <form action="" method="get">
+        <input value="Добавить" type="submit" formaction="AddNewRow" />
+        <input value="Изменить" type="submit" formaction="EditRow" />
+        <input value="Удалить" type="submit" formaction="DeleteRow" />
+        <input value="Поиск" type="submit" formaction="SelectEmployee" />
+        <input checked="checked" name="selection" value="Department" type="radio" /><span>Действия с отделами</span>
+        <input name="selection" value="Employee" type="radio" /><span>Действия с сотрудниками</span>
+    </form>
+}
+

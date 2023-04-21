@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ylTE4OeN8zSPX01NjWqrl1VcHEDAYcM9EKHa3SapclfTj468vlIFBo0c84ZGrhQwUhj5gQEwcFAnbVc3kNOymg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Константин\\Downloads\\HandBook-master\\HandBook\\HandBook.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Константин\\.nuget\\packages\\fsharp.core\\6.0.0\\fsharp.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\Константин\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Константин\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
+    "C:\\Users\\Константин\\.nuget\\packages\\npgsql.fsharp\\5.7.0\\npgsql.fsharp.5.7.0.nupkg.sha512",
+    "C:\\Users\\Константин\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

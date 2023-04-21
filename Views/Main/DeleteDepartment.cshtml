@@ -1,0 +1,17 @@
+﻿@using HandBook.DataBaseFolder;
+@model HandBook.Views.Main.AddEmployeeModel
+@{
+    <form method="post">
+        <label>Внимание! Удаление отдела влечет за собой удаление всех пользователей, привязанных к данному отделу.</label>
+        <label>Выберите отдел</label><br />
+        <select name="department">
+            @foreach (var dep in (List<string>)ViewData["DepartmentList"])
+            {
+                <option value="@dep">@dep</option>
+            }
+        </select><br />
+        <label>@ViewData["Error Message"]</label><br />
+        <input type="submit" value="Удалить" />
+        <br />
+    </form>
+}

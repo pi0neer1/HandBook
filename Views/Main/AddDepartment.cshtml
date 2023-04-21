@@ -1,0 +1,11 @@
+﻿@using HandBook.DataBaseFolder;
+@model HandBook.Views.Main.AddEmployeeModel
+@{
+    <form method="post">
+        <label>Название:</label><br />
+        <input type="text" name="name" /><br />
+        <label>@ViewData["Error Message"]</label><br />
+        <input type="submit" value="Добавить" />
+        <br />
+    </form>
+}
